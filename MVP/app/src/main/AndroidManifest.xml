@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".screens.home.HomeActivity">
         </activity>
+        <activity android:name=".screens.next.NextActivity">
+        </activity>
     </application>
 
 </manifest>

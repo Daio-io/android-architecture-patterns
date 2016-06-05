@@ -8,8 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 
 import io.daio.mvp.MainActivity;
 import io.daio.mvp.R;
+import io.daio.mvp.base.NavigationHandler;
+import io.daio.mvp.screens.next.NextActivity;
 
-public final class HomeActivity extends AppCompatActivity implements HomeContract.NavigationHandler {
+public final class HomeActivity extends AppCompatActivity implements NavigationHandler {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,7 +30,7 @@ public final class HomeActivity extends AppCompatActivity implements HomeContrac
 
     @Override
     public void navigateToNext() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, NextActivity.class);
         startActivity(intent);
         finish();
     }

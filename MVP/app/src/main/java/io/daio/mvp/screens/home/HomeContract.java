@@ -12,7 +12,4 @@ interface HomeContract {
     interface HomeView extends BaseView<HomePresenter> {
     }
 
-    interface NavigationHandler {
-        void navigateToNext();
-    }
 }
