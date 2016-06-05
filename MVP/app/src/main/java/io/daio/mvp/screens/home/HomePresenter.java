@@ -16,12 +16,12 @@ public final class HomePresenter implements HomeContract.HomePresenter {
 
     @Override
     public void start() {
-
+        // At this point you may register listeners
     }
 
     @Override
     public void detach() {
-
+        // de-register listeners and references
     }
 
     @Override

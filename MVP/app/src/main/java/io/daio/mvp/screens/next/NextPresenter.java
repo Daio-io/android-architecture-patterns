@@ -21,7 +21,7 @@ public final class NextPresenter implements NextContract.Presenter {
 
     @Override
     public void start() {
-        view.setUser(userMVPService.getValue());
+        view.setUser(userMVPService.get());
     }
 
     @Override
