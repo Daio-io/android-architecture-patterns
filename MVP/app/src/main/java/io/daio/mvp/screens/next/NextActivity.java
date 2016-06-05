@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import io.daio.mvp.R;
 import io.daio.mvp.base.NavigationHandler;
 import io.daio.mvp.screens.home.HomeActivity;
+import io.daio.mvp.services.UserService;
 
 
 public final class NextActivity extends AppCompatActivity implements NavigationHandler {
@@ -23,7 +24,7 @@ public final class NextActivity extends AppCompatActivity implements NavigationH
             .replace(R.id.main_content, view)
             .commit();
 
-        new NextPresenter(this, view);
+        new NextPresenter(this, view, new UserService());
     }
 
     @Override
