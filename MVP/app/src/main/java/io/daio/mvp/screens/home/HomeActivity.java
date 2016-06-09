@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
-import io.daio.mvp.MainActivity;
 import io.daio.mvp.R;
 import io.daio.mvp.base.NavigationHandler;
 import io.daio.mvp.screens.next.NextActivity;
