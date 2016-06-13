@@ -1,6 +1,5 @@
 package io.daio.mvp.screens.home;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentTransaction;
@@ -8,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import io.daio.mvp.R;
 import io.daio.mvp.base.NavigationHandler;
-import io.daio.mvp.screens.next.NextActivity;
+import io.daio.mvp.screens.ScreenIntentFactory;
 
 public final class HomeActivity extends AppCompatActivity implements NavigationHandler {
 
@@ -29,8 +28,7 @@ public final class HomeActivity extends AppCompatActivity implements NavigationH
 
     @Override
     public void navigateToNext() {
-        Intent intent = new Intent(this, NextActivity.class);
-        startActivity(intent);
+        startActivity(ScreenIntentFactory.nextActivityIntent(HomeActivity.this));
         finish();
     }
 }
