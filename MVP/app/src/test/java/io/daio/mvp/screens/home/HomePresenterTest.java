@@ -31,7 +31,7 @@ public class HomePresenterTest {
 
         presenter.getStarted();
 
-        verify(navigationHandler).navigateToNext();
+        verify(navigationHandler).navigate();
 
     }
 }

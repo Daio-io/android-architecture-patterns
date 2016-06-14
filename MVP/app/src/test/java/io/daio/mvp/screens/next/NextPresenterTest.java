@@ -44,7 +44,7 @@ public class NextPresenterTest {
 
         presenter.done();
 
-        verify(handler).navigateToNext();
+        verify(handler).navigate();
 
     }
 }

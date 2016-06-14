@@ -27,8 +27,9 @@ public final class HomeActivity extends AppCompatActivity implements NavigationH
     }
 
     @Override
-    public void navigateToNext() {
+    public void navigate() {
         startActivity(ScreenIntentFactory.nextActivityIntent(HomeActivity.this));
         finish();
     }
+
 }

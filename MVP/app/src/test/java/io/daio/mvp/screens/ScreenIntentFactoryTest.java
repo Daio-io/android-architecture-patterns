@@ -9,6 +9,7 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.annotation.Config;
 
 import io.daio.mvp.BuildConfig;
+import io.daio.mvp.screens.home.HomeActivity;
 import io.daio.mvp.screens.next.NextActivity;
 
 import static org.junit.Assert.assertTrue;
@@ -24,6 +25,15 @@ public class ScreenIntentFactoryTest {
         String activityName = nextIntent.getComponent().getClassName();
 
         assertTrue(activityName.equals(NextActivity.class.getName()));
+    }
+
+    @Test
+    public void testHomeActivityIntentIsReturnedFromFactory() {
+        Intent homeIntent = ScreenIntentFactory.homeActivityIntent(RuntimeEnvironment.application);
+
+        String activityName = homeIntent.getComponent().getClassName();
+
+        assertTrue(activityName.equals(HomeActivity.class.getName()));
     }
 
 }

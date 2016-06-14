@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import io.daio.mvp.R;
 import io.daio.mvp.base.NavigationHandler;
+import io.daio.mvp.screens.ScreenIntentFactory;
 import io.daio.mvp.screens.home.HomeActivity;
 import io.daio.mvp.services.UserService;
 
@@ -28,8 +29,8 @@ public final class NextActivity extends AppCompatActivity implements NavigationH
     }
 
     @Override
-    public void navigateToNext() {
-        Intent intent = new Intent(this, HomeActivity.class);
+    public void navigate() {
+        Intent intent = ScreenIntentFactory.homeActivityIntent(NextActivity.this);
         startActivity(intent);
         finish();
     }

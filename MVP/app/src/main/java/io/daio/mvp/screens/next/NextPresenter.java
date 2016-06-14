@@ -5,13 +5,13 @@ import io.daio.mvp.base.NavigationHandler;
 import io.daio.mvp.models.User;
 import io.daio.mvp.services.MVPService;
 
-public final class NextPresenter implements NextContract.Presenter {
+final class NextPresenter implements NextContract.Presenter {
 
     private final NavigationHandler handler;
     private final NextContract.View view;
     private MVPService<User> userMVPService;
 
-    public NextPresenter(NavigationHandler handler, NextContract.View view, MVPService<User> userMVPService) {
+    NextPresenter(NavigationHandler handler, NextContract.View view, MVPService<User> userMVPService) {
         this.handler = handler;
         this.view = view;
         this.userMVPService = userMVPService;
@@ -31,6 +31,6 @@ public final class NextPresenter implements NextContract.Presenter {
 
     @Override
     public void done() {
-        handler.navigateToNext();
+        handler.navigate();
     }
 }
